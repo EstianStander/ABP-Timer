@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo" class="header-logo">
+        <nav>
+            <a href="index.html">Main Page</a>
+            <a href="admin.html">Admin Page</a>
+            <a href="delays.html">Delays Page</a>
+        </nav>
+    </header>
+    <main id="admin-page">
+        <h1>Configure Bays</h1>
+        <form id="config-form">
+            <label for="bay-select">Select Bay:</label>
+            <select id="bay-select" name="bay">
+                <option value="1">Bay 1</option>
+                <option value="2">Bay 2</option>
+                <option value="3">Bay 3</option>
+                <option value="4">Bay 4</option>
+                <option value="5">Bay 5</option>
+                <option value="6">Bay 6</option>
+            </select>
+            <br><br>
+
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" name="project-name" required>
+            <br><br>
+
+            <label for="responsible-person">Person Responsible:</label>
+            <input type="text" id="responsible-person" name="responsible-person" required>
+            <br><br>
+
+            <label for="project-deadline">Project Deadline:</label>
+            <input type="datetime-local" id="project-deadline" name="project-deadline" required>
+            <br><br>
+
+            <h2>To-Do List</h2>
+            <div id="todo-container">
+                <!-- To-Do Items will be dynamically added here -->
+            </div>
+            <button type="button" id="add-todo">Add To-Do</button>
+            <br><br>
+
+            <button type="submit">Save Configuration</button>
+        </form>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>
